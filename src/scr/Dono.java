@@ -8,6 +8,8 @@ public class Dono {
 	private String telefone; 
 	private String email;
 	Endereco endereco;
+	Animal animal;
+	
 	
 	public Dono() {
 		this.setCodigo (0);
@@ -16,16 +18,19 @@ public class Dono {
 		this.setTelefone("");
 		this.setEmail ("");
 		this.setEndereco  (new Endereco());//Chamando construtor vazio - com valores padrões 
+		this.setAnimal(new Animal());//chamando construtor vazio - com valores padrões 
 	}//fim do construtor padrão
-	
+
+
 	//2º Máxima da O.O = Sopbrecarga
-	public Dono(int codigo, long cpf, String nome, String telefone, String email, Endereco endereco) {
+	public Dono(int codigo, long cpf, String nome, String telefone, String email, Endereco endereco, Animal animal) {
 		this.setCodigo (codigo);
 		this.setCPF (cpf);
 		this.setNome (nome);
 		this.setTelefone (telefone);
 		this.setEmail  (email);
 		this.setEndereco (endereco);//Logradouro, numero, bairro, cidade, estado, UF, CEP
+		this.setAnimal(animal);//Codigo, nome, especie, raça, idade, peso
 	}//fim do construtor pessoa
 	
 	//Métodos modificadores
@@ -67,6 +72,14 @@ public class Dono {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}//fim do setEndereco 
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
 	
 	public String imprimir() {
 		return "Codigo: " 		+ getCodigo() 	+
@@ -74,7 +87,8 @@ public class Dono {
 				"\nNome: " 		+ getNome()		+
 				"\nTelefone: " 	+ getTelefone() +
 				"\nEmail: " 	+ getEmail()    +
-				"\nDados Endereço: " 			+ this.endereco.imprimir();
+				"\nDados Endereço: " 			+ this.endereco.imprimir() +
+				"\nDados Animal:"				+this.animal.imprimir();
 	}//fim do imprimir
 	
 }

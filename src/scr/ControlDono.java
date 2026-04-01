@@ -9,8 +9,8 @@ public class ControlDono {
 	}//Fim do controle
 	
 	
-	public ControlDono(int codigo, long cpf, String nome , String telefone, String email, Endereco endereco) {
-		this.dono = new Dono(codigo, cpf, nome, telefone, email,endereco);
+	public ControlDono(int codigo, long cpf, String nome , String telefone, String email, Endereco endereco, Animal animal) {
+		this.dono = new Dono(codigo, cpf, nome, telefone, email, endereco, animal);
 	}//Fim do controle com parâmetros//CADASTRAR
 	
 }

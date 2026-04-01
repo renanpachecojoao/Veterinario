@@ -18,7 +18,7 @@ public class Animal {
 		this.setRaca("");
 		this.setIdade(0);
 		this.setPeso(0.0);
-		this.setDono(dono);
+		this.setDono(new Dono());
 	}//fim do construtor padrão
 	
 	//Construtor Animal
@@ -100,7 +100,6 @@ public class Animal {
 				"\nEspécie: " 	+ getEspecie() 	+
 				"\nRaça: "		+ getRaca()     +
 				"\nIdade: "		+ getIdade()	+
-				"\nPeso: "		+ getPeso()		+
-				"\n---- Dono ----\n" + this.dono.imprimir();
-	}//fim do método imprimir 
+				"\nPeso: "		+ getPeso();
+		}//fim do método imprimir 
 }
